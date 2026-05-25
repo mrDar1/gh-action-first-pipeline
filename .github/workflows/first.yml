@@ -8,12 +8,6 @@ jobs:
     steps:
       - name: first-hello
         run: echo "Hello from GitHub Actions!"
-
-      # - name: Print triggering username
-      #   run: echo "Triggered by: ${{ github.actor }}"
-      
-      # - name: Print-triggering-username
-      #   run: echo "Workflow triggered by: ${{ github.actor }}"
         
       - name: Print_triggered_details
         run: |
