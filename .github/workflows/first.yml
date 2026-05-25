@@ -12,7 +12,7 @@ jobs:
       # - name: Print triggering username
       #   run: echo "Triggered by: ${{ github.actor }}"
       
-      - name: Print triggering username
+      - name: Print-triggering-username
         run: echo "Workflow triggered by: ${{ github.actor }}"
 
       - name: count-to-five-bash-style
