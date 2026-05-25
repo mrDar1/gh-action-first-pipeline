@@ -1,0 +1,19 @@
+name: second-ci
+on:
+  push:
+    branches: [ "main" ]
+jobs:
+  os-info:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print OS info
+        run: |
+          echo "Runner OS: ${{ runner.os }}"      # prints the OS name (e.g. Linux)
+          echo "Runner arch: ${{ runner.arch }}"  # prints the CPU architecture (e.g. X64)
+          uname -a                                # prints full kernel/system info
+          lsb_release -a                          # prints distro name, version, and codename
+          nproc                                   # prints number of CPUs available to the runner
+
+      - name: Print branch name
+        run: |
+          echo "Branch: ${{ github.ref_name }}"
