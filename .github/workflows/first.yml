@@ -11,4 +11,4 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       # - uses: actions/checkout@v4
       - name: first-hello
-        run: Hello from GitHub Actions!
+        run: echo "Hello from GitHub Actions!"
