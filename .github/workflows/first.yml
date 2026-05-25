@@ -1,27 +1,23 @@
 name: first-ci
-
 on:
   push:
     branches: [ "main" ]
-
 jobs:
   hello:
     runs-on: ubuntu-latest
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      # - uses: actions/checkout@v4
       - name: first-hello
         run: echo "Hello from GitHub Actions!"
-        
+
       - name: Print triggering username
         run: echo "Triggered by: ${{ github.actor }}"
-        
+
       - name: count-to-five-bash-style
         run: |
           for i in 1 2 3 4 5; do
             echo "$i"
           done
-              
+
       - name: count-to-five-c-style
         run: |
           for ((i=1; i<=5; i++)); do
